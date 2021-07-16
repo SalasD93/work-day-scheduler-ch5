@@ -1,6 +1,6 @@
 function getCurrentDate() {
     // Thursday September 3 format
-    var currentDate = moment().format('dddd, MMMM d');
+    var currentDate = moment().format('dddd, MMMM Do');
     $("#currentDay").text(currentDate);
 }
 
@@ -68,30 +68,7 @@ var timeBlocksObj = [
     },
 ];
 
-// function setCurrentTime() {
-//     let currentTIme = moment().format('HH');
-//     for (var i = 0; i < timeBlocksObj.length; i++) {
-//         if (currentTIme < timeBlocksObj[i].hour.length) {
-            
-//         }
-//     }
-// }
-
-// var currentHour = moment().format('HH');
-// $()
-//     .each(function(){
-//     var val = parseInt($(this).prop('id'));
-//     if(val > currentHour && val < currentHour + 6){
-//         $(this).css('background-color','Blue');
-//     }else if(val < currentHour && val > currentHour-6){
-//         $(this).css('background-color','Red');
-//     }else if(val === currentHour){
-//         $(this).css('background-color','Green');
-//     }else{
-//         $(this).css('background-color','White');
-//     }
-// });
-var currentHour = 11;
+var currentHour = moment().format('HH');
 $('textarea').each(function (index, element){
     // $(element).css('background-color', 'red');
     if ($(element).attr('id') < currentHour) {
@@ -107,10 +84,12 @@ $('textarea').each(function (index, element){
 
 
 
-// $('.saveBtn').on('click', function() {
-//     var userInput = document.querySelector('#09').value.trim();
-//     JSON.stringify(localStorage.setItem(userInput));
-// });
+$('.saveBtn').on('click', function(event) {
+    event.preventDefault();
+    var reminder = $('textarea').val().trim();
+    // JSON.stringify(document.querySelector('#09').val().trim());
+    localStorage.setItem("reminder", JSON.stringify(reminder));
+});
 
 
 getCurrentDate();
