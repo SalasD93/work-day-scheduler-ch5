@@ -5,7 +5,7 @@ This is a work day scheduler created for UM Coding Bootcamp challenge 5.
 **Description**
 
 
-I was tasked with creating a work day scheduler, which included each hour of workday hours, by utilizing dynamically updated HTML and CSS using jQuery. When the page loads, any items stored in localStorage are displayed in the corresponding time blocks as the user had input using the text area and save button.
+I was tasked with creating a work day scheduler, which included each hour of a typical word day, by utilizing dynamically updated HTML and CSS using jQuery. When the page loads, any items stored in localStorage are displayed in the corresponding time blocks as the user had input using the text areas and save buttons.
 
 
 
@@ -44,9 +44,9 @@ THEN the saved events persist
 The following images show the completed challenge.
 
 
-![Homework Screenshot 1]()
-![Homework Screenshot 1]()
-![Homework Screenshot 1]()
+![Homework Screenshot 1](https://github.com/SalasD93/work-day-scheduler-ch5/blob/develop/assets/images/screenshots/CH5-Screenshot1.png?raw=true)
+![Homework Screenshot 1](https://github.com/SalasD93/work-day-scheduler-ch5/blob/develop/assets/images/screenshots/CH5-Screenshot2.png?raw=true)
+![Homework Screenshot 1](https://github.com/SalasD93/work-day-scheduler-ch5/blob/develop/assets/images/screenshots/CH5-Screenshot3.png?raw=true)
 
 
 
