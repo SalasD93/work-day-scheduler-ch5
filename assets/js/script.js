@@ -83,17 +83,70 @@ $('.input').each(function (index, element){
     console.log(element);
 });
 
+
+
+
 var reminder = [];
 $('.saveBtn').on('click', function(event) {
     event.preventDefault();
 
-    var reminder = $('.input')
-    .val()
-    .trim();
+    const input = $(this).siblings("textarea").val();
+    const time = $(this).siblings("div").text();
 
-    // JSON.stringify(document.querySelector('#09').val().trim());
-    localStorage.setItem("reminder", JSON.stringify(reminder));
+    
+    localStorage.setItem(time, JSON.stringify(input));
+
+    // function saveReminders() {
+
+    //     var reminderText = JSON.parse(localStorage.getItem(input));
+    //     $("textarea").textContent = reminderText;
+    //     console.log($("textarea").textContent)
+    // }
+    var reminderText = JSON.parse(localStorage.getItem(time)) || [];
+    function saveReminders(reminderText) {
+        // const input = $(this).siblings("textarea").val();
+        // const time = $(this).siblings("div").text();
+        console.log(reminderText);
+        for (var i = 0; i < reminderText; i++) {
+            $('textarea').val(reminderText[i]);
+            // $('.input').append(saveText);
+                // if (isset($_POST['textarea']) { 
+                // echo $_POST['textarea']; };
+
+        }
+        // // var reminderSaved = document.querySelector(".input");
+        // // reminderSaved.innerHTML = reminderText;
+        // console.log($('textarea').val(reminderText))
+    }
+    saveReminders(reminderText);
+
+    // var reminderText = JSON.parse(localStorage.getItem(time)) || [];
+    // function saveReminders(reminderText) {
+    //     // const input = $(this).siblings("textarea").val();
+    //     // const time = $(this).siblings("div").text();
+        
+    //     console.log(reminderText);
+    //     // console.log($('textarea').val(reminderText[i]));
+    //     // for (var i = 0; i < reminderText; i++) {
+    //     //     // var renderedReminder = $('<p>');
+    //     //     // var textArea = $('textarea');
+    //     //     // renderedReminder[i].text(reminderText[i]);
+    //     //     // textArea.append(renderedReminder);
+            
+    //     // }
+    //     var reminderSaved = document.querySelector(".input");
+    //     reminderSaved.innerHTML = reminderText;
+    //     console.log($('textarea').val(reminderText))
+    // }
+    // saveReminders(reminderText);
+    
 });
+
+// console.log(time, input);
+    // // console.log(input);
+
+    // // JSON.stringify(document.querySelector('#09').val().trim());
+    // // localStorage.setItem("reminder", JSON.stringify(reminder));
 
 // var reminderArray = [
 //     {
