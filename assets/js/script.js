@@ -90,7 +90,7 @@ var reminder = [];
 $('.saveBtn').on('click', function(event) {
     event.preventDefault();
 
-    const input = $(this).siblings("textarea").val();
+    const input = $(this).siblings('textarea').val().trim();
     const time = $(this).siblings("div").text();
 
     
@@ -102,23 +102,29 @@ $('.saveBtn').on('click', function(event) {
     //     $("textarea").textContent = reminderText;
     //     console.log($("textarea").textContent)
     // }
-    var reminderText = JSON.parse(localStorage.getItem(time)) || [];
-    function saveReminders(reminderText) {
+    // var input = $('.input');
+    // for (i = 0; i < input; i++) {
+    //     var inputText = $('.input');
+    //     inputText[i].val(JSON.parse(localStorage.getItem(time))) || [];
+    // }
+    // function saveReminders(reminderText) {
         // const input = $(this).siblings("textarea").val();
         // const time = $(this).siblings("div").text();
-        console.log(reminderText);
-        for (var i = 0; i < reminderText; i++) {
-            $('textarea').val(reminderText[i]);
-            // $('.input').append(saveText);
-                // if (isset($_POST['textarea']) { 
-                // echo $_POST['textarea']; };
+        // console.log(reminderText);
+        // for (var i = 0; i < reminderText; i++) {
+        //     $('.input').val(reminderText[i]);
+        //     // $('.input').append(saveText);
+        //         // if (isset($_POST['textarea']) { 
+        //         // echo $_POST['textarea']; };
 
-        }
+        // }
+        // $("#10").val(JSONparse(localStorage.getItem("10AM").trim()));
+
         // // var reminderSaved = document.querySelector(".input");
         // // reminderSaved.innerHTML = reminderText;
         // console.log($('textarea').val(reminderText))
-    }
-    saveReminders(reminderText);
+    // }
+    // saveReminders(reminderText);
 
     // var reminderText = JSON.parse(localStorage.getItem(time)) || [];
     // function saveReminders(reminderText) {
@@ -359,6 +365,15 @@ $('.saveBtn').on('click', function(event) {
 
 
 // if day = currentset getItem
-
-
+$("#09").val(JSON.parse(localStorage.getItem("9AM")));
+$("#10").val(JSON.parse(localStorage.getItem("10AM")));
+$("#11").val(JSON.parse(localStorage.getItem("11AM")));
+$("#12").val(JSON.parse(localStorage.getItem("12PM")));
+$("#13").val(JSON.parse(localStorage.getItem("1PM")));
+$("#14").val(JSON.parse(localStorage.getItem("2PM")));
+$("#15").val(JSON.parse(localStorage.getItem("3PM")));
+$("#16").val(JSON.parse(localStorage.getItem("4PM")));
+$("#17").val(JSON.parse(localStorage.getItem("5PM")));
+// given by askBCS
+// $("#10").val(localStorage.getItem('10AM'));
 getCurrentDate();
