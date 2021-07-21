@@ -63,7 +63,7 @@ var reminder = [
         text: '',
     },
 ];
-console.log(reminder)
+console.log(reminder);
 
 // timeblock container
 var timeBlocksContainer = $('.container');
@@ -81,7 +81,7 @@ for (var i = 0; i < reminder.length; i++) {
 
     var textArea = $(`<textarea id="${reminder[i].hour}">`);
     $(textArea).val(localStorage.getItem(`${reminder[i].hour}`));
-    console.log(localStorage.getItem(`${reminder[i].hour}`))
+    // console.log(localStorage.getItem(`${reminder[i].hour}`));
     textArea.addClass("col-sm-10 input description");
     currentBlock.append(textArea);
 
@@ -97,9 +97,9 @@ for (var i = 0; i < reminder.length; i++) {
         var textReminder = $(this).siblings('textarea').val().trim();
         if (buttonSubmit === reminderKey) {
             $(textArea).each(function(setReminder){
-                console.log(reminderKey, textReminder);
+                // console.log(reminderKey, textReminder);
                 localStorage.setItem(reminderKey, textReminder);
-                console.log(setReminder);
+                // console.log(setReminder);
                 // needed to remove to prevent display of current text in last array object
                 // $(textArea).val(localStorage.getItem(reminderKey));
                 // console.log(localStorage.getItem(reminderKey));
@@ -123,7 +123,7 @@ $('.input').each(function (index, element) {
     } else {
         $(element).addClass('future');
     }
-    console.log(element);
+    // console.log(element);
 });
 
 // Old code
