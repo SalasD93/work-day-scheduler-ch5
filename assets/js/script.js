@@ -100,8 +100,9 @@ for (var i = 0; i < reminder.length; i++) {
                 console.log(reminderKey, textReminder);
                 localStorage.setItem(reminderKey, textReminder);
                 console.log(setReminder);
-                $(textArea).val(localStorage.getItem(reminderKey));
-                console.log(localStorage.getItem(reminderKey));
+                // needed to remove to prevent display of current text in last array object
+                // $(textArea).val(localStorage.getItem(reminderKey));
+                // console.log(localStorage.getItem(reminderKey));
             })
         }
     });
